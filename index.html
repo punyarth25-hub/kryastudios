@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KRYA Studios Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Ultra-Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top, rgba(225, 6, 0, 0.14), transparent 60%),
+        linear-gradient(180deg, #050505 0%, #000 100%);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Film grain */
+    .grain {
+      position: fixed;
+      inset: 0;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Page structure */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .wrapper {
+      text-align: center;
+      max-width: 1000px;
+      padding: 80px 20px 40px;
+      animation: fadeIn 1.6s ease forwards;
+    }
+
+    .logo {
+      width: clamp(200px, 26vw, 300px);
+      margin-bottom: 12px;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(56px, 8vw, 92px);
+      letter-spacing: 6px;
+      color: #e10600;
+      margin-bottom: 8px;
+    }
+
+    /* TAGLINE – PREMIUM HOVER */
+    .tagline {
+      font-size: 16px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 10px;
+      transition: all 0.35s ease;
+      cursor: default;
+    }
+
+    .tagline:hover {
+      color: #e10600;
+      letter-spacing: 3px;
+      opacity: 1;
+    }
+
+    .agency {
+      font-size: 13px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 60px;
+    }
+
+    .line {
+      width: 110px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e10600, transparent);
+      margin: 0 auto 55px;
+    }
+
+    /* COMING SOON – LUXURY HOVER */
+    .coming {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 4.5vw, 44px);
+      letter-spacing: 14px;
+      text-transform: uppercase;
+      margin-bottom: 80px;
+      position: relative;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .coming::after {
+      content: '';
+      display: block;
+      width: 55%;
+      height: 1px;
+      background: rgba(225, 6, 0, 0.5);
+      margin: 20px auto 0;
+      transition: all 0.4s ease;
+    }
+
+    .coming:hover {
+      color: #e10600;
+      text-shadow: 0 0 18px rgba(225, 6, 0, 0.45);
+    }
+
+    .coming:hover::after {
+      width: 70%;
+      background: #e10600;
+    }
+
+    /* CONNECT SECTION */
+    .connect {
+      margin-top: 20px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 70px;
+    }
+
+    .icons a {
+      color: #fff;
+      font-size: 20px;
+      opacity: 0.75;
+      transition: all 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #e10600;
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 30px 20px 40px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      opacity: 0.45;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile refinements */
+    @media (max-width: 600px) {
+      .coming {
+        letter-spacing: 8px;
+      }
+      .tagline {
+        letter-spacing: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grain"></div>
+
+  <div class="page">
+    <div class="wrapper">
+      <img src="logo.png" alt="KRYA Studios Logo" class="logo" />
+
+      <div class="brand">KRYA STUDIOS CO.</div>
+      <div class="tagline">Stories. Visuals. Motion.</div>
+      <div class="agency">Creative Production Agency</div>
+
+      <div class="line"></div>
+
+      <div class="coming">Coming Soon</div>
+
+      <div class="connect">Connect With Us</div>
+
+       <div class="icons">
+        <a href="https://instagram.com/kryastudios.co?igsh=Z2tocGVxbWZjbWQ2&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918097409465?text=Hello,%20Krya%20Studios.
+" target="_blank"><i class="fab fa-whatsapp"></i></a>
+       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@kryastudios.com&su=Business%20Enquiry" target="_blank">
+  <i class="fas fa-envelope"></i>
+</a>
+
+        <a href="https://linkedin.com/company/krya-studios" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/16w6iGDYet/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 KRYA Studios Co. All Rights Reserved.
+    </footer>
+  </div>
+</body>
+</html>
+
